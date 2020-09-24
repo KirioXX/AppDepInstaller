@@ -2,6 +2,9 @@
 - hosts: all
   connection: local
 
+  vars:
+      the_user: "{{ ansible_user_id }}"
+
   vars_files:
     - default.config.yml
 
@@ -13,5 +16,11 @@
       tags: ['mas']
 
   tasks:
+    - name: change user shell to zsh
+      become: yes
+      user:
+        name: "{{ the_user }}"
+        shell: /bin/zsh
+
     - include_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']

@@ -14,12 +14,7 @@ It will ask you after the first setup for your user password.
 So please keep an eye on your command line and provide your password.
 
 ## Manual Steps
-Make zsh your default shell by running this command in your terminal:
-```sh
-chsh -s /bin/zsh
-```
-
-Please add the following lines to your `.zshrc` file:
+Please add the following lines to your `~/.zshrc` file:
 ```sh
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
