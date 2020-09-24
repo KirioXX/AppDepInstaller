@@ -34,8 +34,7 @@ composer_packages: []
 gem_packages:
   - cocoapods
 npm_packages:
-  - name: detox-cli
-    global: yes
+  - detox-cli
 pip_packages: []
   # - name: mkdocs
   #   state: present # present/absent/latest, default: present
