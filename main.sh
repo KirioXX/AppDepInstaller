@@ -5,12 +5,11 @@ function fetchConfig {
 }
 
 function installAnsible {
-    wget https://github.com/ownport/portable-ansible/releases/download/v0.4.2/portable-ansible-v0.4.2-py3.tar.bz2 --no-verbose -O ansible.tar.bz2
-    tar -xjf ansible.tar.bz2
+    curl -L https://github.com/ownport/portable-ansible/releases/download/v0.4.2/portable-ansible-v0.4.2-py3.tar.bz2 | tar -xz
     for l in config console doc galaxy inventory playbook pull vault;do
         ln -s ansible ansible-$l
     done
-    python3 ansible -i ./config/inventory -m ping
+    python3 ansible localhost -m ping
 }
 
 function cleanUp {
@@ -26,8 +25,13 @@ function installDependencies {
     python3 ansible-playbook ./config/main.yml -i ./config/inventory -K
 }
 
-fetchConfig
-installAnsible
-installRequirements
-installDependencies
-cleanUp
+if command -v python3 &> /dev/null
+then
+    fetchConfig
+    installAnsible
+    installRequirements
+    installDependencies
+    cleanUp
+else
+    echo "Please install python 3"
+fi

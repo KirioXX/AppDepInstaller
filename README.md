@@ -2,4 +2,11 @@
 
 Requirements:
 * python3
-* wget
+
+To start the installation process run this command:
+```sh
+curl --compressed -o- -L https://raw.githubusercontent.com/KirioXX/AppDepInstaller/main/main.sh | bash
+```
+
+It will ask you after the first setup for your user password.
+So please keep an eye on your command line and provide your password.
