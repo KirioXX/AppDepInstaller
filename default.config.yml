@@ -4,6 +4,7 @@ homebrew_installed_packages:
   - node
   - ruby
   - watchman
+  - zsh
 
 homebrew_taps:
   - homebrew/cask
