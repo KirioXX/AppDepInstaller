@@ -16,11 +16,14 @@
       tags: ['mas']
 
   tasks:
+    - include_tasks: tasks/extra-packages.yml
+      tags: ['extra-packages']
+
+    - include_tasks: tasks/avd-devices.yml
+      tags: ['avd-devices']
+
     - name: change user shell to zsh
       become: yes
       user:
         name: "{{ the_user }}"
         shell: /bin/zsh
-
-    - include_tasks: tasks/extra-packages.yml
-      tags: ['extra-packages']

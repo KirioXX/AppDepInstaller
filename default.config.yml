@@ -41,7 +41,12 @@ npm_packages:
   - detox-cli
 
 pip_packages:
-  - fb-idb
+  - name: fb-idb
+    executable: pip3
 
-# Glob pattern to ansible task files to run after all other tasks are finished.
-post_provision_tasks: []
+# Install avd devices
+# Note: Add zip with the avd folder and ini file
+# to the avd-arc folder that matches the zip name
+# (e.g. arc: Pixel_3a_XL_API_28.zip, item: Pixel_3a_XL_API_28)
+avd_archives:
+  - Pixel_3a_XL_API_28
