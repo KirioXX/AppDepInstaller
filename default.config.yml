@@ -1,12 +1,14 @@
 ---
 homebrew_installed_packages:
   - applesimutils
+  - idb-companion
   - node
   - ruby
   - watchman
   - zsh
 
 homebrew_taps:
+  - facebook/fb
   - homebrew/cask
   - homebrew/core
   - wix/brew
@@ -31,14 +33,15 @@ composer_packages: []
   # - name: drush
   #   state: present # present/absent, default: present
   #   version: "^8.1" # default: N/A
+
 gem_packages:
   - cocoapods
+
 npm_packages:
   - detox-cli
-pip_packages: []
-  # - name: mkdocs
-  #   state: present # present/absent/latest, default: present
-  #   version: "0.16.3" # default: N/A
+
+pip_packages:
+  - fb-idb
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
