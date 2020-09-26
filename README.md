@@ -12,18 +12,3 @@ curl --compressed -o- -L https://raw.githubusercontent.com/KirioXX/AppDepInstall
 
 It will ask you after the first setup for your user password.
 So please keep an eye on your command line and provide your password.
-
-## Manual Steps
-Please add the following lines to your `~/.zshrc` file:
-```sh
-# Android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# JAVA
-export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
-export PATH=$PATH:$JAVA_HOME/bin
-```
