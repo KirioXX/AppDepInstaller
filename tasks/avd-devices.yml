@@ -1,14 +1,14 @@
 ---
 - name: Extract avd archives.
   unarchive:
-    src: "https://github.com/KirioXX/AppDepInstaller/raw/main/avd-arc/{{ item }}.zip"
+    src: "{{ item.src }}"
     remote_src: yes
     dest: "{{ ansible_env.HOME }}/.android/avd"
   with_items: "{{ avd_archives }}"
 
 - name: Update avd inis.
   lineinfile:
-    path: "{{ ansible_env.HOME }}/.android/avd/{{ item }}.ini"
+    path: "{{ ansible_env.HOME }}/.android/avd/{{ item.name }}.ini"
     regexp: '^path='
-    line: "path={{ ansible_env.HOME}}/.android/avd/{{ item }}.avd "
+    line: "path={{ ansible_env.HOME}}/.android/avd/{{ item.name }}.avd "
   with_items: "{{ avd_archives }}"
