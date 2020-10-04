@@ -44,7 +44,8 @@ pip_packages:
 # make sure that the ini file matches the name
 # e.g. name: Pixel_3a_XL_API_28 ini_file: Pixel_3a_XL_API_28.ini
 avd_archives:
-  - {
-      name: Pixel_3a_XL_API_28,
-      src: "https://googledrive.com/host/1wTi86tY3HV_Ugd64bBKLSls00cja6yT1/Pixel_3a_XL_API_28.zip",
-    }
+  []
+  # - {
+  #     name: Pixel_3a_XL_API_28,
+  #     src: "https://drive.google.com/u/0/uc?export=download&confirm=m4Uy&id=1VrsFOVY9V1m2ei9gDHrEqJer4CRZnszK",
+  #   }
