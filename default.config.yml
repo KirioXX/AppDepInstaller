@@ -45,6 +45,6 @@ pip_packages:
 # e.g. name: Pixel_3a_XL_API_28 ini_file: Pixel_3a_XL_API_28.ini
 avd_archives:
   - {
-    name: Pixel_3a_XL_API_28,
-    src: "https://github.com/KirioXX/AppDepInstaller/raw/main/avd-arc/Pixel_3a_XL_API_28.zip"
-  }
+      name: Pixel_3a_XL_API_28,
+      src: "https://googledrive.com/host/1wTi86tY3HV_Ugd64bBKLSls00cja6yT1/Pixel_3a_XL_API_28.zip",
+    }
