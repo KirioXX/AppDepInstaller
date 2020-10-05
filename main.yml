@@ -3,21 +3,21 @@
   connection: local
 
   vars:
-      the_user: "{{ ansible_user_id }}"
+    the_user: "{{ ansible_user_id }}"
 
   vars_files:
     - default.config.yml
 
   roles:
     - role: geerlingguy.homebrew
-      tags: ['homebrew']
+      tags: ["homebrew"]
     - role: geerlingguy.mas
       when: mas_installed_apps|bool
-      tags: ['mas']
+      tags: ["mas"]
 
   tasks:
     - include_tasks: tasks/extra-packages.yml
-      tags: ['extra-packages']
+      tags: ["extra-packages"]
 
     - name: change user shell to zsh
       become: yes
@@ -41,4 +41,4 @@
           export PATH=$PATH:$JAVA_HOME/bin
 
     - include_tasks: tasks/avd-devices.yml
-      tags: ['avd-devices']
+      tags: ["avd-devices"]

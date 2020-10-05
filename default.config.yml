@@ -39,13 +39,9 @@ pip_packages:
   - name: fb-idb
     executable: pip3
 
-# Install avd devices
-# Note: Add zip path with the avd folder and ini file to install in .android/avd
+# Install avd devices archive stored in google drive
+# Note: Add google drive share id to avd archive to install in .android/avd
 # make sure that the ini file matches the name
 # e.g. name: Pixel_3a_XL_API_28 ini_file: Pixel_3a_XL_API_28.ini
 avd_archives:
-  []
-  # - {
-  #     name: Pixel_3a_XL_API_28,
-  #     src: "https://drive.google.com/u/0/uc?export=download&confirm=m4Uy&id=1VrsFOVY9V1m2ei9gDHrEqJer4CRZnszK",
-  #   }
+  - { name: Pixel_3a_XL_API_28, id: "1VrsFOVY9V1m2ei9gDHrEqJer4CRZnszK" }

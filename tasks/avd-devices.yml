@@ -1,14 +1,17 @@
 ---
+- name: Download archives
+  shell: cd {{ ansible_env.HOME }}/.android/avd && curl gdrive.sh | bash -s {{ item.id }}
+  with_items: "{{ avd_archives }}"
+
 - name: Extract avd archives.
   unarchive:
-    src: "{{ item.src }}"
-    remote_src: yes
+    src: "{{ ansible_env.HOME }}/.android/avd/{{ item.name }}.zip"
     dest: "{{ ansible_env.HOME }}/.android/avd"
   with_items: "{{ avd_archives }}"
 
 - name: Update avd inis.
   lineinfile:
     path: "{{ ansible_env.HOME }}/.android/avd/{{ item.name }}.ini"
-    regexp: '^path='
+    regexp: "^path="
     line: "path={{ ansible_env.HOME}}/.android/avd/{{ item.name }}.avd "
   with_items: "{{ avd_archives }}"
