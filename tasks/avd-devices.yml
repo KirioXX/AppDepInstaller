@@ -1,12 +1,17 @@
 ---
-- name: Download archives
-  shell: cd {{ ansible_env.HOME }}/.android/avd && curl gdrive.sh | bash -s {{ item.id }}
+- name: Download archives.
+  shell: |
+    cd {{ ansible_env.HOME }}/.android/avd
+    curl https://raw.githubusercontent.com/KirioXX/gdrive.sh/master/gdrive.sh | bash -s {{ item.id }}
+  args:
+    creates: "{{ ansible_env.HOME }}/.android/avd/{{ item.name }}.zip"
   with_items: "{{ avd_archives }}"
 
 - name: Extract avd archives.
   unarchive:
     src: "{{ ansible_env.HOME }}/.android/avd/{{ item.name }}.zip"
     dest: "{{ ansible_env.HOME }}/.android/avd"
+    creates: "{{ ansible_env.HOME }}/.android/avd/{{ item.name }}.ini"
   with_items: "{{ avd_archives }}"
 
 - name: Update avd inis.
