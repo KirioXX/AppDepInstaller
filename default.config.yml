@@ -22,7 +22,7 @@ homebrew_cask_apps:
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
-  - { id: 497799835, name: "Xcode" }
+  - { id: 497799835, name: "Xcode (11.7)" }
 mas_email: ""
 mas_password: ""
 
