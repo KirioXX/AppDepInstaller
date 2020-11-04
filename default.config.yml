@@ -1,6 +1,7 @@
 ---
 homebrew_installed_packages:
   - applesimutils
+  - bitrise
   - idb-companion
   - node
   - ruby
