@@ -22,7 +22,7 @@ function installRequirements {
 }
 
 function installDependencies {
-    python3 ansible-playbook ./config/main.yml -i ./config/hosts.ini -K
+    python3 ansible-playbook ./config/main.yml -K
 }
 
 if command -v python3 &> /dev/null
