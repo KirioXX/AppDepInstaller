@@ -1,29 +1,43 @@
 ---
-homebrew_installed_packages:
-  - applesimutils
-  - bitrise
-  - idb-companion
-  - node
-  - ruby
-  - watchman
-  - zsh
-
 homebrew_taps:
-  - facebook/fb
+  - aws/tap
   - homebrew/cask
   - homebrew/core
-  - wix/brew
+
+homebrew_installed_packages:
+  - aws-sam-cli
+  - ctop
+  - fish
+  - httpie
+  - jq
+  - nvm
+  - terraform
+  - tree
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - altair-graphql-client
   - android-studio
-  - flipper
-  - react-native-debugger
+  - cheatsheet
+  - discord
+  - docker
+  - firefox-developer-edition
+  - gitkraken
+  - iterm2
+  - postman
+  - slack
+  - spotify
+  - vagrant
+  - vagrant-manager
+  - visual-studio-code
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
-  - { id: 497799835, name: "Xcode (11.7)" }
+  - {id: 1116599239, name: "NordVPN IKE - Unlimited VPN"}
+  - {id: 1461456897, name: "Tyme 3 - Time tracking"}
+  - {id: 405843582, name: "Alfred"}
+  - {id: 441258766, name: "Magnet"}
+  - {id: 668208984, name: "GIPHY Capture. The GIF Maker"}
+  - {id: 926036361, name: "LastPass Password Manager"}
 mas_email: ""
 mas_password: ""
 
@@ -31,18 +45,11 @@ mas_password: ""
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
 gem_packages:
-  - cocoapods
+  #- cocoapods
 
 npm_packages:
-  - detox-cli
+  #- detox-cli
 
 pip_packages:
-  - name: fb-idb
+  - name: awscli
     executable: pip3
-
-# Install avd devices archive stored in google drive
-# Note: Add google drive share id to avd archive to install in .android/avd
-# make sure that the ini file matches the name
-# e.g. name: Pixel_3a_XL_API_28 ini_file: Pixel_3a_XL_API_28.ini
-avd_archives:
-  - { name: Pixel_3a_XL_API_28, id: "1VrsFOVY9V1m2ei9gDHrEqJer4CRZnszK" }

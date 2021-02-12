@@ -1,7 +1,8 @@
-# Install Helper for Patchwork App
+# Install Helper for my Mac setup
 
 Requirements:
 * python3
+* git
 
 ## Install
 To start the installation process run this command:
