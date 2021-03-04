@@ -27,3 +27,9 @@
     name: alias.lg
     scope: global
     value: log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+- name: add config to use main branch on init
+  community.general.git_config:
+    name: init.defaultBranch
+    scope: global
+    value: main
