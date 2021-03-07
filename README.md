@@ -13,3 +13,7 @@ bash -l -c "$(curl -sfL https://raw.githubusercontent.com/KirioXX/AppDepInstalle
 
 It will ask you after the first setup for your user password.
 So please keep an eye on your command line and provide your password.
+
+## TODO
+
+* [ ] Install [Spaceship](https://denysdovhan.com/spaceship-prompt/) for zsh

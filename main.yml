@@ -24,8 +24,18 @@
     - include_tasks: tasks/extra-packages.yml
       tags: ["extra-packages"]
 
-    - name: change user shell to fish
+    - name: change user shell to zsh
       become: yes
       user:
         name: "{{ the_user }}"
-        shell: /bin/fish
+        shell: /bin/zsh
+
+    # Install Oh-My-Zsh
+    - name: Check if .oh-my-zsh dir exist
+      stat:
+        path: "/home/{{ the_user }}/.oh-my-zsh"
+      register: omz_dir
+
+    - name: install oh-my-zsh
+      shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      when: not omz_dir.stat.exists

@@ -3,16 +3,17 @@ homebrew_taps:
   - aws/tap
   - homebrew/cask
   - homebrew/core
+  - homebrew/cask-fonts
 
 homebrew_installed_packages:
   - aws-sam-cli
   - ctop
-  - fish
   - httpie
   - jq
   - nvm
   - terraform
   - tree
+  - zsh
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -21,6 +22,7 @@ homebrew_cask_apps:
   - discord
   - docker
   - firefox-developer-edition
+  - font-hack-nerd-font
   - gitkraken
   - iterm2
   - postman
